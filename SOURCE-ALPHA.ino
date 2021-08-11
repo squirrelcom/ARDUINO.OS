@@ -1,7 +1,3 @@
-/* 
- *  LCD SHIELD PROGRAM v0.9 - MK 
- */
- 
 #include <time.h>
 #include <NewPing.h>  //NEWPING-ECHO
 #define TRIGGER_PIN A1
