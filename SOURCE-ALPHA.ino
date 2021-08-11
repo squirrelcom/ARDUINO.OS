@@ -478,9 +478,9 @@ byte ReadButtons()
 }
 
 if(w==2){ //TEXT
-  if(k==2){char a[16]="Stalo sie. Moze "; char bb[16]="nie w tak spekta"; lcd.cursorTo(1,0); lcd.printIn(a); lcd.cursorTo(2,0); lcd.printIn(bb);} 
-  if(k==3){char a[16]="nie w tak spekta"; char bb[16]="kularny sposob j"; lcd.cursorTo(1,0); lcd.printIn(a); lcd.cursorTo(2,0); lcd.printIn(bb);} if(k<2){k=2;} 
-  if(k==4){char a[16]="kularny sposob j"; char bb[16]="ak zapowiadaly t"; lcd.cursorTo(1,0); lcd.printIn(a); lcd.cursorTo(2,0); lcd.printIn(bb);}    
+  if(k==2){char a[16]="Welcome to /////"; char bb[16]="nie w tak spekta"; lcd.cursorTo(1,0); lcd.printIn(a); lcd.cursorTo(2,0); lcd.printIn(bb);} 
+  if(k==3){char a[16]="ChipOS Let's go "; char bb[16]="kularny sposob j"; lcd.cursorTo(1,0); lcd.printIn(a); lcd.cursorTo(2,0); lcd.printIn(bb);} if(k<2){k=2;} 
+  if(k==4){char a[16]="through the apps"; char bb[16]="ak zapowiadaly t"; lcd.cursorTo(1,0); lcd.printIn(a); lcd.cursorTo(2,0); lcd.printIn(bb);}    
   if(k==5){char a[16]="ak zapowiadaly t"; char bb[16]="o filmy i gry..."; lcd.cursorTo(1,0); lcd.printIn(a); lcd.cursorTo(2,0); lcd.printIn(bb);} 
 switch (lcd_key) {
   case btnLEFT:{lcd.clear();w=0; break;} 
@@ -500,70 +500,70 @@ LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
 
 byte dino[8] =
 {
- B00010,
- B00111,
- B00111,
- B00110,
- B00111,
- B10110,
- B11110,
- B01010
+  B00100,
+  B00111,
+  B00111,
+  B11110,
+  B11111,
+  B01110,
+  B01110,
+  B01010
 };
 byte dino1[8] =
 {
- B00010,
- B00111,
- B00111,
- B00110,
- B00111,
- B10110,
- B11110,
- B01000
+  B00100,
+  B00111,
+  B00111,
+  B11110,
+  B11111,
+  B01110,
+  B01110,
+  B01000
 };
 
 byte dino2[8] =
 {
- B00010,
- B00111,
- B00111,
- B00110,
- B00111,
- B10110,
- B11110,
- B00010
+  B00100,
+  B00111,
+  B00111,
+  B11110,
+  B11111,
+  B01110,
+  B01110,
+  B00010
 };
 byte dinosit[8] =
 {
- B00000,
- B00000,
- B00010,
- B00111,
- B00111,
- B10110,
- B11110,
- B01010
+  B00000,
+  B00000,
+  B00100,
+  B00111,
+  B00111,
+  B11110,
+  B11111,
+  B01010
 };
 byte dinosit1[8] =
 {
- B00000,
- B00000,
- B00010,
- B00111,
- B00111,
- B10110,
- B11110,
- B01000
+  B00000,
+  B00000,
+  B00100,
+  B00111,
+  B00111,
+  B11110,
+  B11111,
+  B00010
 };
 byte dinosit2[8] =
 {
- B00000,
- B00000,
- B00010,
- B00111,
- B00111,
- B10110,
- B11110,
- B00010
+  B00000,
+  B00000,
+  B00100,
+  B00111,
+  B00111,
+  B11110,
+  B11111,
+  B01010
 };
 byte obs1[8] =
 {
@@ -770,9 +770,9 @@ int getKey() {
 
 if(w==0){ //MENU
 lcd.cursorTo(1,0); lcd.printIn("v0.1"); lcd.cursorTo(1,12); lcd.printIn("HOME");
-if(s==1) {lcd.cursorTo(2,0); lcd.printIn(">GAME TEXT TIMER");}
-if(s==2) {lcd.cursorTo(2,0); lcd.printIn(" GAME>TEXT TIMER");} 
-if(s==3) {lcd.cursorTo(2,0); lcd.printIn(" GAME TEXT>TIMER");}
+if(s==1) {lcd.cursorTo(2,0); lcd.printIn(">GAME HELP TIMER");}
+if(s==2) {lcd.cursorTo(2,0); lcd.printIn(" GAME>HELP TIMER");} 
+if(s==3) {lcd.cursorTo(2,0); lcd.printIn(" GAME HELP>TIMER");}
 if(s==4) {lcd.cursorTo(2,0); lcd.printIn(">CALC");}
 
 if(sonar.ping_cm()>=1){ 
