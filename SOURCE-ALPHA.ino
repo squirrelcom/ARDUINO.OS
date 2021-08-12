@@ -779,8 +779,7 @@ if(sonar.ping_cm()>=1){
 counttt = sonar.ping_cm(); 
 itoa(counttt, outputCounttt, 10);
 lcd.cursorTo(1,4); lcd.printIn("|"); lcd.cursorTo(1,6); lcd.printIn("  "); 
-lcd.cursorTo(1,9); lcd.printIn("cm"); lcd.cursorTo(1,11); lcd.printIn("|");
-lcd.cursorTo(1,5); lcd.printIn(outputCounttt); } //DISTANCE 
+lcd.cursorTo(1,11); lcd.printIn("|");
 
 switch (lcd_key)               // depending on which button was pushed, we perform an action
  {
