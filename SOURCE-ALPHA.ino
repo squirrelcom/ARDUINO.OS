@@ -174,7 +174,7 @@ void setup()
   lcd.print( "               " );
   delay(1000);
   Serial.begin(9600);
-  Serial.print ("We are in setup");      //Testing purposes
+  Serial.print ("We are setup");      //Testing purposes
 
 }
 
