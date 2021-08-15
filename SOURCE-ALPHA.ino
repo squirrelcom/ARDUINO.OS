@@ -125,7 +125,9 @@ lcd.cursorTo(1,0); lcd.printIn("Time:");
   }
     
   delay(1000); switch (lcd_key) {case btnLEFT:{lcd.clear();w=0;count=0; break;}}  }
- 
+
+if(w==5){ //SLOT1
+if(w==6){ //SLOT2
 if(w==4){ //CALC
  
 #define LCD_BACKLIGHT_OFF()     digitalWrite( LCD_BACKLIGHT_PIN, LOW )
@@ -773,7 +775,9 @@ lcd.cursorTo(1,0); lcd.printIn("v0.1"); lcd.cursorTo(1,12); lcd.printIn("HOME");
 if(s==1) {lcd.cursorTo(2,0); lcd.printIn(">GAME HELP TIMER");}
 if(s==2) {lcd.cursorTo(2,0); lcd.printIn(" GAME>HELP TIMER");} 
 if(s==3) {lcd.cursorTo(2,0); lcd.printIn(" GAME HELP>TIMER");}
-if(s==4) {lcd.cursorTo(2,0); lcd.printIn(">CALC");}
+if(s==4) {lcd.cursorTo(2,0); lcd.printIn(">CALC SLO1 SLOT2");}
+if(s==5) {lcd.cursorTo(2,0); lcd.printIn(" CALC>SLO1 SLOT2");}
+if(s==6) {lcd.cursorTo(2,0); lcd.printIn(" CALC SLO1>SLOT2");}
 
 if(sonar.ping_cm()>=1){ 
 counttt = sonar.ping_cm(); 
@@ -788,10 +792,14 @@ switch (lcd_key)               // depending on which button was pushed, we perfo
      if(s==1) {s=2; break;}
      if(s==2) {s=3; break;}
      if(s==3) {s=4; break;}
-     if(s==4) {s=4; break;}
+     if(s==4) {s=5; break;}
+     if(s==5) {s=6; break;}
+     if(s==6) {s=6; break;}
      }
    case btnLEFT:
      {
+     if(s==6 && w==0) {s=5; break;}
+     if(s==5 && w==0) {s=4; break;}
      if(s==4 && w==0) {s=3; break;}
      if(s==3 && w==0) {s=2; break;}
      if(s==2 && w==0) {s=1; break;}
@@ -804,6 +812,8 @@ switch (lcd_key)               // depending on which button was pushed, we perfo
    case btnSELECT:
      {
 //---
+if(s==6) {w=6; lcd.clear(); break;}
+if(s==5) {w=5; lcd.clear(); break;}
 if(s==4) {w=4; lcd.clear(); break;}
 if(s==3) {w=3; lcd.clear(); break;}
 if(s==2) {w=2; lcd.clear(); break;}
